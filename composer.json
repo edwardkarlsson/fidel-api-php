@@ -2,6 +2,8 @@
 	"name": "edwardkarlsson/fidel-api-php",
 	"description": "PHP package for implementing the Fidel API.",
 	"type": "library",
+	"keywords": ["fidel", "api", "laravel"],
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Edward Karlsson",
@@ -26,5 +28,7 @@
 	},
 	"scripts": {
 		"test": "vendor/bin/phpunit"
-	}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
 }
