@@ -2,8 +2,6 @@
 
 namespace FidelAPI;
 
-use GuzzleHttp\Client;
-
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     /**
@@ -32,7 +30,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->app->bind(FidelAPI::class, function () {
             return new FidelAPI(
                 config('fidel-api.token'),
-                Client::class
+                new \GuzzleHttp\Client()
             );
         });
     }
