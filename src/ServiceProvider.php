@@ -27,10 +27,17 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             __DIR__ . '/../config/fidel-api.php' => config_path('fidel-api.php'),
         ]);
 
-        $this->app->bind(FidelAPI::class, function () {
+        $headers = [
+            'Content-Type' => 'application/json',
+            'Fidel-Key' => config('fidel-api.token'),
+            'fidel-key' => config('fidel-api.token')
+        ];
+
+
+        $this->app->bind(FidelAPI::class, function () use ($headers) {
             return new FidelAPI(
                 config('fidel-api.token'),
-                new \GuzzleHttp\Client()
+                new \GuzzleHttp\Client(['base_uri' => config('fidel-api.base_url'), 'headers' => $headers])
             );
         });
     }
