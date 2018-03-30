@@ -19,7 +19,7 @@ class FidelResponse
      */
     public function __construct($data)
     {
-        $this->items = collect($data->items);
+        $this->items = $data->items;
         $this->resource = $data->resource;
         $this->status = $data->status;
         $this->execution = $data->execution;
@@ -72,10 +72,9 @@ class FidelResponse
      */
     public function processItems($class)
     {
-        $this->items
-            ->transform(function($item) use ($class) {
-                return (new $class())->make($item);
-            });
+        foreach ($this->items as $key => $item) {
+            $this->items[$key] = (new $class())->make($item);
+        }
 
         return $this;
     }

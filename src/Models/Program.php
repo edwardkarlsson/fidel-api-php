@@ -2,7 +2,7 @@
 
 namespace FidelAPI\Models;
 
-class Program
+class Program extends FidelModel
 {
 
 }
