@@ -7,35 +7,35 @@ class Brand extends FidelModel
     /**
      * @var string
      */
-    protected $updated;
+    public $updated;
 
     /**
      * @var string
      */
-    protected $accountId;
+    public $accountId;
 
     /**
      * @var string
      */
-    protected $created;
+    public $created;
 
     /**
      * @var string
      */
-    protected $id;
+    public $id;
 
     /**
      * @var string
      */
-    protected $name;
+    public $name;
 
     /**
      * @var boolean
      */
-    protected $live;
+    public $live;
 
     /**
      * @var boolean
      */
-    protected $consent;
+    public $consent;
 }

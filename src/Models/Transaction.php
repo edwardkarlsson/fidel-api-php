@@ -4,129 +4,128 @@ namespace FidelAPI\Models;
 
 class Transaction extends FidelModel
 {
+    /**
+     * @var string
+     */
+    public $currency;
 
     /**
      * @var string
      */
-    protected $currency;
+    public $midId;
 
     /**
      * @var string
      */
-    protected $midId;
+    public $time;
 
     /**
      * @var string
      */
-    protected $time;
+    public $city;
 
     /**
      * @var string
      */
-    protected $city;
+    public $date;
 
     /**
      * @var string
      */
-    protected $date;
+    public $programId;
 
     /**
      * @var string
      */
-    protected $programId;
+    public $id;
 
     /**
      * @var string
      */
-    protected $id;
+    public $scheme;
 
     /**
      * @var string
      */
-    protected $scheme;
+    public $postcode;
 
     /**
      * @var string
      */
-    protected $postcode;
+    public $accountId;
 
     /**
      * @var string
      */
-    protected $accountId;
+    public $countryCode;
 
     /**
      * @var string
      */
-    protected $countryCode;
+    public $created;
 
     /**
      * @var string
      */
-    protected $created;
-
-    /**
-     * @var string
-     */
-    protected $address;
+    public $address;
 
     /**
      * @var boolean
      */
-    protected $live;
+    public $live;
 
     /**
      * @var string
      */
-    protected $cardId;
+    public $cardId;
 
     /**
      * @var string
      */
-    protected $lastNumbers;
+    public $lastNumbers;
 
     /**
      * @var string
      */
-    protected $updated;
+    public $updated;
 
     /**
      * @var string
      */
-    protected $firstNumbers;
+    public $firstNumbers;
 
     /**
      * @var string
      */
-    protected $brandId;
+    public $brandId;
 
     /**
      * @var integer
      */
-    protected $amount;
+    public $amount;
 
     /**
      * @var boolean
      */
-    protected $cleared;
+    public $cleared;
 
     /**
      * @var string
      */
-    protected $locationId;
+    public $locationId;
 
     /**
      * @var string
      */
-    protected $wallet;
+    public $wallet;
 
     /**
      * @var string
      */
-    protected $type;
+    public $type;
 
     /**
      * @var string
      */
-    protected $merchantId;
+    public $merchantId;
 }

@@ -7,75 +7,75 @@ class Card extends FidelModel
     /**
      * @var string
      */
-    protected $scheme;
+    public $scheme;
 
     /**
      * @var string
      */
-    protected $accountId;
+    public $accountId;
 
     /**
      * @var string
      */
-    protected $countryCode;
+    public $countryCode;
 
     /**
      * @var string
      */
-    protected $created;
+    public $created;
 
     /**
      * @var integer
      */
-    protected $expYear;
+    public $expYear;
 
     /**
      * @var string
      */
-    protected $expDate;
+    public $expDate;
 
     /**
      * @var string
      */
-    protected $firstNumbers;
+    public $firstNumbers;
 
     /**
      * @var string
      */
-    protected $live;
+    public $live;
 
     /**
      * @var integer
      */
-    protected $lastNumbers;
+    public $lastNumbers;
 
     /**
      * @var integer
      */
-    protected $expMonth;
+    public $expMonth;
 
     /**
      * @var string
      */
-    protected $updated;
+    public $updated;
 
     /**
      * @var string
      */
-    protected $metadata;
+    public $metadata;
 
     /**
      * @var string
      */
-    protected $programId;
+    public $programId;
 
     /**
      * @var string
      */
-    protected $id;
+    public $id;
 
     /**
      * @var string
      */
-    protected $type;
+    public $type;
 }

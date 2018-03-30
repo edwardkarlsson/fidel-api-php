@@ -4,6 +4,7 @@ namespace FidelAPI\Tests;
 
 use Exception;
 use Faker\Factory;
+use Faker\Generator;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Foundation\Exceptions\Handler;
 use Marcarian\Core\Models\User;
@@ -13,20 +14,16 @@ use Tests\TestCase;
 abstract class FidelAPITestCase extends TestCase
 {
     /**
-     * @var Factory
+     * @var Generator
      */
-    private $faker;
+    protected $faker;
 
     /**
-     * Boots the container for most use cases. This data can be overridden.
+     * @inheritdoc
      */
-    protected function bootContainer()
-    {
-        resolve(ContainerBooter::class)->boot();
-
-        $this->setTestUser();
-
-        return $this;
+    public function setUp() {
+        parent::setUp();
+        $this->useFaker();
     }
 
     /**
@@ -48,6 +45,7 @@ abstract class FidelAPITestCase extends TestCase
      */
     protected function useFaker()
     {
+        /** @var Generator faker */
         $this->faker = Factory::create();
     }
 
