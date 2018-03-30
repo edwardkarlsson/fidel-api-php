@@ -18,7 +18,7 @@ class TransactionsResource extends FidelResource
     {
         $resource = '/transactions/' . $transactionId;
 
-        return $this->fidelAPI->call($resource);
+        return $this->fidelAPI->call($resource)->processItems(Transaction::class);
     }
 
     /**
