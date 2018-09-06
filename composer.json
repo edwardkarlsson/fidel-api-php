@@ -20,12 +20,13 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"FidelAPI\\": "src/"
+			"FidelAPI\\": "src/",
+			"FidelAPI\\Tests\\": "tests/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"FidelAPI\\Tests\\": "tests"
+			"FidelAPI\\Tests\\": "tests/"
 		}
 	},
 	"scripts": {
